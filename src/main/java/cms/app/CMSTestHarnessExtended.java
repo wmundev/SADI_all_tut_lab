@@ -1,10 +1,11 @@
-package app;
+package cms.app;
 
-import cms.app.CMSTestHarness;
 import cms.model.aircraft.Aircraft;
+import cms.model.interfaces.Van;
 import cms.model.interfaces.Vehicle;
-import cms.model.vehicle.Truck;
-import cms.model.vehicle.Van;
+import cms.model.vehicle.SimpleTruck;
+import cms.model.vehicle.SimpleVan;
+
 
 /**
  * TestHarness which tests the following functionalities
@@ -25,8 +26,11 @@ public class CMSTestHarnessExtended extends CMSTestHarness {
     // Van and Truck constructors same as last week
     // Aircraft(id, make, model, year, averageSpeed, maxFlights, flightHours, serviceInterval (in hours))
     private static Vehicle[] testVehicles = new Vehicle[]
-            {new Van("v1", "Toyota", "Sienna", 1998, 0.0, 500.0), new Van("v2", "Volkswagen", "Routan S", 2009, 0.0, 1000.0),
-                    new Truck("t1", "Peterbilt", "379 ", 1990, 0.0, 2000.0, 3000), new Truck("t2", "Peterbilt", "386", 2005,
+            {new SimpleVan("v1", "Toyota", "Sienna", 1998, 0.0, 500.0), new Van
+                    ("v2", "Volkswagen", "Routan S", 2009, 0.0, 1000.0),
+                    new SimpleTruck("t1", "Peterbilt", "379 ", 1990, 0.0,
+                            2000.0, 3000), new Truck("t2", "Peterbilt",
+                    "386", 2005,
                     0.0, 2000.0, 3500), new Aircraft("a1", "Boeing", "747", 2003, 1000, 6, 0.0, 30.0), new Aircraft(
                     "a2", "Boeing", "707", 1979, 1000.0, 6, 0.0, 20.0), new Aircraft("a3", "Lockheed",
                     "L188C Electra", 1957, 1000.0, 3, 0.0, 10.0)};
